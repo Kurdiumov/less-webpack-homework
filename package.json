@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Kurdiumov/less-webpack-homework/issues"
   },
-  "homepage": "https://github.com/Kurdiumov/less-webpack-homework#readme",
+  "homepage": "https://github.com/Kurdiumov/less-webpack-homework",
   "devDependencies": {
     "autoprefixer": "^10.1.0",
     "babel-eslint": "^10.1.0",
