@@ -1,0 +1,163 @@
+@header-color: #fff;
+
+header {
+  position: relative;
+  background: url("https://image.ibb.co/jBXfxA/bg-contact.jpg") no-repeat center
+    center/cover;
+  color: @header-color;
+  padding: 15% 0 0 0;
+  min-height: 650px;
+
+  .title-main span {
+    display: block;
+
+    &:last-child {
+      font-size: 23px;
+      font-size: 1.4375rem;
+    }
+  }
+
+  .menu {
+    color: @text-color;
+    background: @background-color;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 10px;
+    border-bottom: 2px solid rgba(104, 104, 104, 0.1);
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    div {
+      display: block;
+      width: 40px;
+      height: 3px;
+      margin-top: 7px;
+      background-color: @text-color;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .nav-main {
+    display: none;
+    clear: both;
+    background:@background-color;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 2px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      display: block;
+      width: 100%;
+      padding: 20px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: @primary-color;
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        -o-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+        -o-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        color: @primary-color;
+        font-weight: bold;
+
+        &::before {
+          -webkit-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+          -o-transform: scale(1, 1);
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+
+  .title-sub {
+    font-size: 48px;
+    font-size: 3rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 82px;
+      height: 3px;
+      left: -webkit-calc(50% - 41px);
+      left: calc(50% - 41px);
+      bottom: -10px;
+      background: @header-color;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-main {
+      display: block;
+      float: right;
+      width: 70%;
+
+      ul {
+        text-align: right;
+      }
+
+      li {
+        display: inline-block;
+        margin-left: 40px;
+      }
+
+      a {
+        text-transform: uppercase;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 95vh;
+    padding-top: 14em;
+  }
+}
