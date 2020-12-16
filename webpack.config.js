@@ -41,8 +41,8 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
-          test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
+          test: /\.less$/,
+          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"]
         }
       ]
     }
