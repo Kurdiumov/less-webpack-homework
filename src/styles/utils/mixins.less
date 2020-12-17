@@ -1,0 +1,17 @@
+.caption-blurb-mixin(@verticalAxis, @horizontalAxis) {
+  @{verticalAxis}: 0;
+  @{horizontalAxis}: 0;
+  border-@{verticalAxis}: 2px solid @caption-color;
+  border-@{horizontalAxis}: 2px solid @caption-color;
+  content: "";
+  position: absolute;
+  height: @offset;
+  width: @offset;
+  transition: all 1s ease-in-out;
+}
+
+.place-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

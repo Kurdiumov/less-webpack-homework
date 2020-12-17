@@ -3,3 +3,76 @@
 @font-face {
   font-family: "Roboto", sans-serif;
 }
+
+.caption-head {
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+header {
+  color: @header-color;
+
+  .title-main span {
+    &:last-child {
+      font-size: 23px;
+      font-size: 1.4375rem;
+    }
+  }
+
+  .menu {
+    color: @text-color;
+  }
+  .nav-main {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: @primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .title-sub {
+    font-size: 48px;
+    font-size: 3rem;
+  }
+}
+
+#contact {
+  form {
+    p,
+    input,
+    textarea,
+    button {
+      font-size: @contact-font-size;
+      color: @text-color;
+    }
+
+    button {
+      color: @button-text-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    ul {
+      text-align: right;
+    }
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .caption-blurb {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
